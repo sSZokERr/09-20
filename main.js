@@ -14,3 +14,10 @@ function folotte(){
 }
 
 document.getElementById('bekezdes').addEventListener('pointerover', folotte)
+
+function init(){
+    console.log('init')
+}
+
+document.addEventListener('DOMContentLoaded')
+console.log('js vege')
