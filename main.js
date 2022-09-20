@@ -23,6 +23,11 @@ function szamol() {
 	document.getElementById('kivonas').textContent = (parseFloat(egyikszam) - parseFloat(masikszam));
 }
 
+function betuszin(e){
+    let szin = e.currentTarget.value
+    document.body.style.color = szin;
+}
+
 function hatterszin(e) {
     let szin = e.currentTarget.value;
     console.log(szin);
@@ -34,7 +39,8 @@ function init() {
 	document.getElementById('masik').addEventListener('change', szamol)
 	document.getElementById('egyik').addEventListener('change', szamol)
 
-	document.getElementById('hatter').addEventListener('change', hatterszin)
+	document.getElementById('hatter').addEventListener('input', hatterszin)
+	document.getElementById('betu').addEventListener('input', betuszin)
 	console.log('init')
 }
 
