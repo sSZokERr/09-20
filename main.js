@@ -25,6 +25,7 @@ function szamol() {
 
 function betuszin(e){
     let szin = e.currentTarget.value
+    console.log(szin);
     document.body.style.color = szin;
 }
 
