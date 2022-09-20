@@ -19,6 +19,8 @@ function szamol(){
     let egyikszam = document.getElementById('egyik').value;
     let masikszam = document.getElementById('masik').value;
     document.getElementById('ered').value = (parseFloat(egyikszam) + parseFloat(masikszam));
+
+    document.getElementById('kivonas').textContent = (parseFloat(egyikszam) - parseFloat(masikszam));
 }
 
 
