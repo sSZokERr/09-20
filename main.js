@@ -1,34 +1,41 @@
-function katt(){
-    window.alert('Katt')
+function katt() {
+	window.alert('Katt')
 }
 
-function duppla(){
-    window.alert('katt katt')
+function duppla() {
+	window.alert('katt katt')
 }
 
 document.getElementById('fogomb').addEventListener('click', katt)
 document.getElementById('fogomb').addEventListener('dblclick', duppla)
 
-function folotte(){
-    console.log('pointer')
+function folotte() {
+	console.log('pointer')
 }
 
 document.getElementById('bekezdes').addEventListener('pointerover', folotte)
 
-function szamol(){
-    let egyikszam = document.getElementById('egyik').value;
-    let masikszam = document.getElementById('masik').value;
-    document.getElementById('ered').value = (parseFloat(egyikszam) + parseFloat(masikszam));
+function szamol() {
+	let egyikszam = document.getElementById('egyik').value;
+	let masikszam = document.getElementById('masik').value;
+	document.getElementById('ered').value = (parseFloat(egyikszam) + parseFloat(masikszam));
 
-    document.getElementById('kivonas').textContent = (parseFloat(egyikszam) - parseFloat(masikszam));
+	document.getElementById('kivonas').textContent = (parseFloat(egyikszam) - parseFloat(masikszam));
+}
+
+function hatterszin(e) {
+    let szin = e.currentTarget.value;
+    console.log(szin);
+    document.getElementById('szinezo').style.backgroundColor = szin;
 }
 
 
+function init() {
+	document.getElementById('masik').addEventListener('change', szamol)
+	document.getElementById('egyik').addEventListener('change', szamol)
 
-function init(){
-    document.getElementById('masik').addEventListener('change', szamol)
-    document.getElementById('egyik').addEventListener('change', szamol)
-    console.log('init')
+	document.getElementById('hatter').addEventListener('change', hatterszin)
+	console.log('init')
 }
 
 document.addEventListener('DOMContentLoaded', init)
