@@ -19,5 +19,5 @@ function init(){
     console.log('init')
 }
 
-document.addEventListener('DOMContentLoaded')
+document.addEventListener('DOMContentLoaded', init)
 console.log('js vege')
