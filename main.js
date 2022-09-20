@@ -1,5 +1,12 @@
 function katt() {
 	window.alert('Katt')
+    document.getElementById('fogomb').classList.toggle('fontos')
+
+    if (document.getElementById('fogomb').classList.contains('fontos')){
+        document.getElementById('fogomb').textContent = 'Ez egy fontos gomb';
+    }else {
+        document.getElementById('fogomb').textContent = "Ez egy sima gomb";
+    }
 }
 
 function duppla() {
